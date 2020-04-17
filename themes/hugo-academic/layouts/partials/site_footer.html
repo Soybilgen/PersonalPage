@@ -1,0 +1,26 @@
+<footer class="site-footer">
+<script src="https://code.iconify.design/1/1.0.5/iconify.min.js"></script>
+<script src="https://code.iconify.design/1/1.0.5/iconify.min.js"></script>
+
+  <p class="powered-by">
+	©Baris Soybilgen, 2020 
+
+	<br>Hosted on
+	<i class="fab fa-github"></i> <a href='https://github.com/Soybilgen/Personalpage'>GitHub</a> &middot; 
+	Served by <span class="iconify" data-icon="logos-netlify" data-inline="false"></span> <a href='https://github.com/Soybilgen/Personalpage'>netlify</a>
+    <br>Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <span class="iconify" data-icon="logos-hugo" data-inline="false"></span><a href='https://gohugo.io/'> Hugo</a> and 
+	<i class='fab fa-r-project'></i> <a href='https://bookdown.org/yihui/blogdown/'>Blogdown</a> 
+
+    {{ if not (in (slice "docs" "updates") .Type) }}
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    {{ end }}
+  </p>
+</footer>
