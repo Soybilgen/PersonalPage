@@ -23,7 +23,7 @@ div.gray { background-color:#F3F3F3; border-radius: 5px; padding: 20px;}
 ---
 
 <div class = "gray">
-[**Nowcasting US GDP Using Tree-Based Ensemble Models and Dynamic Factors**](http://soybilgen.com/wp-content/uploads/2020/04/CEFIS2001.pdf) \
+[**Nowcasting US GDP Using Tree-Based Ensemble Models and Dynamic Factors**](../files/WP1.pdf) \
 (with Ege Yazgan)
 
 <span style="color: red;">Abstract:</span>
@@ -34,7 +34,7 @@ In this study, we nowcast quarter over quarter US GDP growth rates between 2000Q
 <br>
 
 <div class = "gray">
-[**Time Varying Taylor Rule Estimation For Turkey with Flexible Least Square Method**](http://soybilgen.com/wp-content/uploads/2020/04/Time-Varying-Taylor-Rule-Estimation-For-Turkey-with-Flexible-Least-Square-Method.pdf) \
+[**Time Varying Taylor Rule Estimation For Turkey with Flexible Least Square Method**](../files/WP2.pdf) \
 (with Burak Alparslan Eroglu)
 
 <span style="color: red;">Abstract:</span>
