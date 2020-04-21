@@ -1,0 +1,56 @@
+---
+title: Animating Mortality Data
+summary: Animating Mortality Data
+date: '`r format(Sys.Date(), "%Y-%m-%d")`'
+
+reading_time: false  # Show estimated reading time?
+share: false  # Show social sharing links?
+profile: false  # Show author profile?
+comments: true  # Show comments?
+
+# Optional header image (relative to `static/img/` folder).
+header:
+  caption: ""
+  image: ""
+---
+
+## 
+
+After I extracted EuroMomo Pooled Number of Deaths for 15-64 year-olds in my previous [post](https://www.soybilgen.com/post/excessdeath/), I decided that it is a good idea to animate the graph. Here is a small example about animating figures.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library("tidyverse")
+library("plotly")
+library("lubridate")
+library("tsibble")
+library("transformr")
+library("gganimate")
+library("gifski")
+
+Data <- read.csv2(file="EuroMomo.csv",header=T,sep = ",", dec = ".")
+Data[,1] <- as.Date(Data[,1],format="%d/%m/%Y")
+
+# Aggregate Duplicate Dates 
+Data_Clean <- Data %>%
+    group_by(date) %>%
+    summarize(Mortality = mean(Number))
+
+Data_Clean <- data.frame(yearweek(as.matrix(Data_Clean[,1])),Data_Clean)
+colnames(Data_Clean) <- c("week","date","Mortality")
+
+# Define the ggplot
+p <- Data_Clean %>% 
+  mutate(
+    year = factor(year(date)),     # use year to define separate curves
+    date = update(date, year = 1)  # use a constant year for the x-axis
+  ) %>% 
+  ggplot(aes(date, Mortality, color = year, group=year)) +
+    scale_x_date(date_breaks = "1 month", date_labels = "%b") + 
+  geom_line() + labs(x = "Months", title ="EuroMomo Pooled Number of Deaths (15-64 year-olds)", 
+  subtitle= "Last Update: 14th Week of 2020")
+
+anim2 <- p + transition_reveal(week)
+animate(anim2, duration = 10, end_pause = 100, rewind = FALSE,
+        fps = 20, width = 500, height = 300, renderer = gifski_renderer())
+anim_save("output.gif")
+```
