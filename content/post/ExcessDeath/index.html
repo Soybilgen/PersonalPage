@@ -1,0 +1,86 @@
+---
+title: Extracting Mortality Data from EuroMomo Images (Non-Technical Way)
+summary: Extracting Data from Figures
+date: '2020-04-21'
+
+reading_time: false  # Show estimated reading time?
+share: false  # Show social sharing links?
+profile: false  # Show author profile?
+comments: true  # Show comments?
+
+# Optional header image (relative to `static/img/` folder).
+header:
+  caption: ""
+  image: ""
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
+<script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
+
+
+<div id="section" class="section level2">
+<h2></h2>
+<p>After much research, it seems that the only way to understand how many people are died from COVID-19 is to estimate excess death numbers from mortality data. <a href="https://www.economist.com/graphic-detail/2020/04/16/tracking-covid-19-excess-deaths-across-countries">Economist</a> calculates excess death numbers for some countries, and <a href="https://twitter.com/J_CD_T">James Tozer</a> promised to publish the underlying data on GitHub.</p>
+{{% tweet "1250815367276003330" %}}
+<p>Another important source is <a href="https://www.euromomo.eu">EuroMomo project</a> which aims to measure the excess number of deaths related to influenza and other possible public health threats across participating European Countries. They obtain mortality data from 24 participating countries or regions. However, they don’t give raw data but only display aggregate mortality data as a figure. Shame!</p>
+<p><img src="EuroMoMo.png"></p>
+<p>Let’s learn how to obtain this data using a website called <a href="https://automeris.io/WebPlotDigitizer/">Web Plot Digitizer</a> for quick data extraction. If you need to extract a large number of figures, then it is better to write some Python codes (e.g. to obtain data from all <a href="https://www.google.com/covid19/mobility/">Google Community Mobility Reports</a> which is also a great source for COVID-19 related research.)<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Now let’s take the figure and upload it to the <a href="https://automeris.io/WebPlotDigitizer/">Web Plot Digitizer</a>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Choose 2D (X-Y) Plot,</p></li>
+<li><p>Align X-Y Axes,</p></li>
+<li><p>Enter X &amp; Y Axes Start and End Points,</p></li>
+<li><p>Use Automatic Extraction by Box or Pen,<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p></li>
+<li><p>Choose the foreground of your line,</p></li>
+<li><p>Run the algorithm. Probably, there will be lots of incorrectly identified points at first,</p></li>
+<li><p>Choose background color and try experimenting with distance in filter colors,<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p></li>
+<li><p>If there is any more incorrectly identified points, delete points manually,</p></li>
+<li><p>Choose the optimal <span class="math inline">\(\Delta\)</span>X and <span class="math inline">\(\Delta\)</span>Y, so that there will not be too much gap between points,</p></li>
+<li><p>Run the algorithm and copy-paste your data.</p></li>
+</ol>
+<p><img src="Steps.png"></p>
+<p>After obtaining data and make some ggplot2 and plotly manipulations, here is the final result:</p>
+<pre class="r"><code>library(&quot;tidyverse&quot;)
+library(&quot;plotly&quot;)
+library(&quot;lubridate&quot;)
+library(&quot;widgetframe&quot;)
+
+Data &lt;- read.csv2(file=&quot;EuroMomo.csv&quot;,header=T,sep = &quot;,&quot;, dec = &quot;.&quot;)
+Data[,1] &lt;- as.Date(Data[,1],format=&quot;%d/%m/%Y&quot;)
+
+# Aggregate Duplicate Dates 
+Data_Clean &lt;- Data %&gt;%
+    group_by(date) %&gt;%
+    summarize(Mortality = mean(Number))
+
+# Define the ggplot
+p &lt;- Data_Clean %&gt;% 
+  mutate(
+    year = factor(year(date)),     # use year to define separate curves
+    date = update(date, year = 1)  # use a constant year for the x-axis
+  ) %&gt;% 
+  ggplot(aes(date, Mortality, color = year, group=year)) +
+    scale_x_date(date_breaks = &quot;1 month&quot;, date_labels = &quot;%b&quot;) + 
+  geom_line() + labs(x = &quot;Months&quot;, title =&quot;Figure 3: EuroMomo Pooled Number of Deaths &lt;br&gt; (15-64 Years, Interactive Image)&quot;)
+
+# Convert it to plotly
+p_plotly &lt;- ggplotly(p, tooltip=c(&quot;Mortality&quot;))
+p_plotly &lt;- p_plotly %&gt;%
+  layout(
+  xaxis = list(
+        type = &#39;Weeks&#39;,
+        tickformat = &quot;%U&quot;
+  ))
+frameWidget(ggplotly(p_plotly))</code></pre>
+<div id="htmlwidget-1" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/post/ExcessDeath/index_files/figure-html//widgets/widget_unnamed-chunk-2.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>The reddit user, <a href="https://www.reddit.com/user/typhoidisbad/">typhoidisbad</a> shows how to do it in this <a href="https://gist.github.com/Amarang/3341c9a24da4556def7c3a03a12949b8">link</a>.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>If the color of your line is distinct enough from other lines, just choose box and quickly paint all your line.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>In this example, 320 works for me.<a href="#fnref3" class="footnote-back">↩</a></p></li>
+</ol>
+</div>

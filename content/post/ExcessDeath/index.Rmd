@@ -1,0 +1,90 @@
+---
+title: Extracting Mortality Data from EuroMomo Images (Non-Technical Way)
+summary: Extracting Data from Figures
+date: '`r format(Sys.Date(), "%Y-%m-%d")`'
+
+reading_time: false  # Show estimated reading time?
+share: false  # Show social sharing links?
+profile: false  # Show author profile?
+comments: true  # Show comments?
+
+# Optional header image (relative to `static/img/` folder).
+header:
+  caption: ""
+  image: ""
+---
+
+## 
+
+After much research, it seems that the only way to understand how many people are died from COVID-19 is to estimate excess death numbers from mortality data. [Economist](https://www.economist.com/graphic-detail/2020/04/16/tracking-covid-19-excess-deaths-across-countries) calculates excess death numbers for some countries, and [James Tozer](https://twitter.com/J_CD_T) promised to publish the underlying data on GitHub.
+
+```{r echo=FALSE}
+blogdown::shortcode('tweet', '1250815367276003330')
+```
+
+Another important source is [EuroMomo project](https://www.euromomo.eu) which aims to measure the excess number of deaths related to influenza and other possible public health threats across participating European Countries. They obtain mortality data from 24 participating countries or regions. However, they don't give raw data but only display aggregate mortality data as a figure. Shame!
+
+<img src="EuroMomo.png">
+
+Let's learn how to obtain this data using a website called [Web Plot Digitizer](https://automeris.io/WebPlotDigitizer/) for quick data extraction. If you need to extract a large number of figures, then it is better to write some Python codes (e.g. to obtain data from all [Google Community Mobility Reports](https://www.google.com/covid19/mobility/) which is also a great source for COVID-19 related research.)^[The reddit user, [typhoidisbad](https://www.reddit.com/user/typhoidisbad/) shows how to do it in this [link](https://gist.github.com/Amarang/3341c9a24da4556def7c3a03a12949b8).]
+
+Now let's take the figure and upload it to the [Web Plot Digitizer](https://automeris.io/WebPlotDigitizer/).
+
+1. Choose 2D (X-Y) Plot,
+
+2. Align X-Y Axes,
+
+3. Enter X & Y Axes Start and End Points,
+
+4. Use Automatic Extraction by Box or Pen,^[If the color of your line is distinct enough from other lines, just choose box and quickly paint all your line.]
+
+5. Choose the foreground of your line,
+
+6. Run the algorithm. Probably, there will be lots of incorrectly identified points at first,
+
+7. Choose background color and try experimenting with distance in filter colors,^[In this example, 320 works for me.]
+
+8. If there is any more incorrectly identified points, delete points manually,
+
+9. Choose the optimal $\Delta$X and $\Delta$Y, so that there will not be too much gap between points,
+
+10. Run the algorithm and copy-paste your data.
+
+<img src="Steps.png">
+
+After obtaining data and make some ggplot2 and plotly manipulations, here is the final result:
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library("tidyverse")
+library("plotly")
+library("lubridate")
+library("widgetframe")
+
+Data <- read.csv2(file="EuroMomo.csv",header=T,sep = ",", dec = ".")
+Data[,1] <- as.Date(Data[,1],format="%d/%m/%Y")
+
+# Aggregate Duplicate Dates 
+Data_Clean <- Data %>%
+    group_by(date) %>%
+    summarize(Mortality = mean(Number))
+
+# Define the ggplot
+p <- Data_Clean %>% 
+  mutate(
+    year = factor(year(date)),     # use year to define separate curves
+    date = update(date, year = 1)  # use a constant year for the x-axis
+  ) %>% 
+  ggplot(aes(date, Mortality, color = year, group=year)) +
+    scale_x_date(date_breaks = "1 month", date_labels = "%b") + 
+  geom_line() + labs(x = "Months", title ="Figure 3: EuroMomo Pooled Number of Deaths <br> (15-64 Years, Interactive Image)")
+
+# Convert it to plotly
+p_plotly <- ggplotly(p, tooltip=c("Mortality"))
+p_plotly <- p_plotly %>%
+  layout(
+  xaxis = list(
+        type = 'Weeks',
+        tickformat = "%U"
+  ))
+frameWidget(ggplotly(p_plotly))
+```
