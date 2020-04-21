@@ -1,6 +1,6 @@
 ---
 title: Animating Mortality Data
-summary: Animating Mortality Data
+summary: Animating Data
 date: '`r format(Sys.Date(), "%Y-%m-%d")`'
 
 reading_time: false  # Show estimated reading time?
