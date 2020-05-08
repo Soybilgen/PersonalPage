@@ -2,7 +2,7 @@
 .RData
 .Ruserdata
 .DS_Store
-.Rmd
+*.Rmd
 
 public/
 .Rproj.user/
