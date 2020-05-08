@@ -2,6 +2,7 @@
 .RData
 .Ruserdata
 .DS_Store
+.Rmd
 
 public/
 .Rproj.user/

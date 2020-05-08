@@ -1,0 +1,148 @@
+---
+title: Daily Turkish Lira Emerging Markets Currency Index
+summary: This index shows the performance of the Turkish Lira against average of 14 emerging nation currencies.
+tags:
+- Turkey
+date: '`r format(Sys.Date(), "%Y-%m-%d")`'
+
+# Optional external URL for project (replaces project detail page).
+external_link: ""
+
+image:
+  caption: Daily Turkish Lira Emerging Markets Currency Index
+  focal_point: Smart
+
+links:
+- icon: twitter
+  icon_pack: fab
+  name: Follow
+  url: https://twitter.com/soybilgen
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+
+# Slides (optional).
+#   Associate this project with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
+#   Otherwise, set `slides = ""`.
+# slides: example
+---
+
+```{r, message = FALSE, warning = FALSE, include = FALSE}
+rm(list=ls())
+library("xlsx") #load excel
+library("PerformanceAnalytics") #correlation graph
+
+library("tidyverse") #tidyverse
+library("ggplot2") #tidyverse graph
+library("lubridate") #tidyverse time
+library("plotly") #animated graph
+
+library("markdown") #markdown
+library("rmarkdown") #markdown
+library("knitr") #markdown
+
+library("widgetframe")
+library("webshot")
+```
+
+```{r include = FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+```
+
+```{r, message = FALSE, warning = FALSE, include = FALSE}
+###################################### Load FX_EM
+FX_EM <- read.xlsx2(file="D:\\Dropbox\\StockForecast\\DataSet.xlsx",sheetName = "SpotEMUSD")
+
+FX_EM <- FX_EM[-1,-1]
+
+indx <- sapply(FX_EM, is.factor)
+FX_EM[indx] <- lapply(FX_EM[indx], function(x) as.numeric(as.character(x)))
+
+NA_Index <- which(is.na(FX_EM), arr.ind = T)
+
+if (sum(NA_Index)!=0) {
+
+  for (i in 1:nrow(NA_Index)) {
+    if (NA_Index[i,1]==1) {
+      FX_EM[NA_Index[i,1],NA_Index[i,2]] <- FX_EM[(NA_Index[i,1]+1),NA_Index[i,2]]
+    } else {
+      FX_EM[NA_Index[i,1],NA_Index[i,2]] <- FX_EM[(NA_Index[i,1]-1),NA_Index[i,2]]
+    }
+  }
+
+}
+
+rm(NA_Index)
+
+FX_Date_Numeric <- FX_EM[,1]
+FX_EM <- FX_EM[,-1]
+```
+
+```{r, message = FALSE, warning = FALSE, include = FALSE}
+###################################### Data Manipulation
+Number_of_Currencies <- ncol(FX_EM)
+
+start <- as.Date("1899-12-30")
+FX_Date_String <- as.Date(FX_Date_Numeric, origin=start)
+
+FX_EM <- data.frame(FX_Date_String, FX_EM)
+
+FX_EM <- FX_EM[order(FX_EM$FX_Date_String),]
+
+FX_Date_Decompose <- data.frame(year=format(FX_EM$FX_Date_String,format="%Y"),month=format(FX_EM$FX_Date_String,format="%m"),day=format(FX_EM$FX_Date_String,format="%d"))
+
+FX_Date_Decompose <- sapply(FX_Date_Decompose, function(x) as.numeric(as.character(x)))
+```
+
+```{r, message = FALSE, warning = FALSE, include = FALSE}
+###################################### Index Calculation
+indx_start <- which(FX_EM$FX_Date_String=="2018-01-01")
+indx_end <- nrow(FX_EM)
+indx_FX_EM <- FX_EM
+
+for (i in 1:Number_of_Currencies) {
+  indx_FX_EM[,i+1] <- (FX_EM[,i+1]/FX_EM[indx_start,i+1])*100
+}
+
+index <- (rowMeans(indx_FX_EM[,2:Number_of_Currencies])/indx_FX_EM[,Number_of_Currencies+1])*100
+index <- data.frame(indx_FX_EM$FX_Date_String,index)
+colnames(index) <- c("Date","Index")
+```
+
+This index shows the performance of the Turkish Lira against average of 14 emerging nation currencies. As benchmark currencies, the index include Czech Koruna, Croatian Kuna, Polish Zloty, Romanian Leu, Thai Baht, Indian Rupee, Indonesian Rupiah, Malaysian Ringgit, Philippine Peso, Brazilian Real, Chilean Peso, Colombian Peso, Argentine Peso, Mexican Peso. The index equal to 100 on 01 Jan 2018.
+
+```{r, message = FALSE, warning = FALSE, include = FALSE}
+p <- ggplot(data = index, aes(x = Date)) +
+  geom_line(aes(y=Index), color="darkred") + theme_bw() +
+  labs(x = "", y = "",
+  title ="TRY Emerging Markets Currency Index",
+  subtitle = "01-Jan-2018=100") + 
+  scale_x_date(date_breaks = "3 months" , date_labels = "%b-%y") + 
+  scale_x_date(limits = c(index$Date[1],index$Date[nrow(index)]), expand = c(0, 0))
+
+g <- ggplotly(p, dynamicTicks = TRUE) %>% rangeslider()
+
+ggsave("featured.png", width = 6, height = 2)
+```
+
+```{r, message = FALSE, warning = FALSE}
+frameWidget(g)
+```
+
+```{r, message = FALSE, warning = FALSE, include = FALSE}
+p_short <- ggplot(data = index[(nrow(index)-60):nrow(index),], aes(x = Date)) +
+  geom_line(aes(y=Index), color="darkred") + theme_bw() +
+  labs(x = "", y = "",
+  title ="TRY Emerging Markets Currency Index (Last 60 Trading Days)",
+  subtitle = "01-Jan-2018=100") + 
+  scale_x_date(date_breaks = "3 weeks" , date_labels = "%b-%y")
+
+g_short <- ggplotly(p_short, dynamicTicks = TRUE)
+```
+
+```{r, message = FALSE, warning = FALSE}
+frameWidget(g_short)
+```
