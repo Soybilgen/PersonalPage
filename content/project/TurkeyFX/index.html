@@ -35,8 +35,24 @@ slides: example
 <script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
 
 
-<p>This index shows the performance of the Turkish Lira against average of 14 emerging nation currencies. As benchmark currencies, the index include Czech Koruna, Croatian Kuna, Polish Zloty, Romanian Leu, Thai Baht, Indian Rupee, Indonesian Rupiah, Malaysian Ringgit, Philippine Peso, Brazilian Real, Chilean Peso, Colombian Peso, Argentine Peso, Mexican Peso. The index equal to 100 on 01 Jan 2018.</p>
+<p>This index shows the performance of the Turkish Lira against average of 14 emerging nation currencies. As benchmark currencies, the index include Czech Koruna, Croatian Kuna, Polish Zloty, Romanian Leu, Thai Baht, Indian Rupee, Indonesian Rupiah, Malaysian Ringgit, Philippine Peso, Brazilian Real, Chilean Peso, Colombian Peso, Argentine Peso, Mexican Peso. The index equal to 100 on 01 Jan 2018. The index data can be downloaded <a href="/files/TRYEMindex.csv">here</a>.</p>
+<p><img src="/project/TurkeyFX/index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <div id="htmlwidget-1" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/project/TurkeyFX/index_files/figure-html//widgets/widget_unnamed-chunk-7.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
-<div id="htmlwidget-2" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2">{"x":{"url":"/project/TurkeyFX/index_files/figure-html//widgets/widget_unnamed-chunk-9.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/project/TurkeyFX/index_files/figure-html//widgets/widget_unnamed-chunk-9.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<p>Here is the code in <i class='fab fa-r-project'></i> to produce the above plotly figure:</p>
+<pre class="r"><code>library(&quot;ggplot2&quot;) #tidyverse graph
+library(&quot;plotly&quot;) #animated graph
+library(&quot;widgetframe&quot;) #frame package
+
+index &lt;- read.csv(&quot;https://www.soybilgen.com/files/TRYEMindex.csv&quot;, stringsAsFactors = F)
+index$Date &lt;- as.Date(index$Date, &quot;%Y-%m-%d&quot;)
+
+p &lt;- ggplot(data = index, aes(x = Date)) +
+  geom_line(aes(y=Index), color=&quot;darkred&quot;) + theme_bw() +
+  labs(x = &quot;&quot;, y = &quot;&quot;,
+  title =&quot;TRY Emerging Markets Currency Index&quot;) + 
+  scale_x_date(date_breaks = &quot;3 months&quot; , date_labels = &quot;%b-%y&quot;)
+
+g &lt;- ggplotly(p, dynamicTicks = TRUE) %&gt;% rangeslider()
+
+frameWidget(g)</code></pre>
