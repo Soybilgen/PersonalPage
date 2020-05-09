@@ -38,3 +38,5 @@ slides: example
 <p>This index shows the performance of the Turkish Lira against average of 14 emerging nation currencies. As benchmark currencies, the index include Czech Koruna, Croatian Kuna, Polish Zloty, Romanian Leu, Thai Baht, Indian Rupee, Indonesian Rupiah, Malaysian Ringgit, Philippine Peso, Brazilian Real, Chilean Peso, Colombian Peso, Argentine Peso, Mexican Peso. The index equal to 100 on 01 Jan 2018.</p>
 <div id="htmlwidget-1" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/project/TurkeyFX/index_files/figure-html//widgets/widget_unnamed-chunk-7.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"url":"/project/TurkeyFX/index_files/figure-html//widgets/widget_unnamed-chunk-9.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
