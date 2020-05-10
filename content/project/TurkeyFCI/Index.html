@@ -1,0 +1,73 @@
+---
+title: Daily Turkish Financial Conditions Index
+summary: This index tracks the volatility and risk in the Turkish financial markets.
+tags:
+- Turkey
+date: '2020-05-10'
+
+# Optional external URL for project (replaces project detail page).
+external_link: ""
+
+image:
+  caption: Daily Turkish Financial Conditions Index
+  focal_point: Smart
+
+links:
+- icon: twitter
+  icon_pack: fab
+  name: Follow
+  url: https://twitter.com/soybilgen
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+
+# Slides (optional).
+#   Associate this project with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
+#   Otherwise, set `slides = ""`.
+slides: example
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/pymjs/pym.v1.js"></script>
+<script src="/rmarkdown-libs/widgetframe-binding/widgetframe.js"></script>
+
+
+<p>As Turkey is a developing country, there are not many indices to track the volatility in Turkish financial markets. Therefore, a simple financial conditions index is proposed to track the volatility and risk in the Turkish financial markets. Five variables that can be used the track financial conditions in Turkey are selected for this index: USD/TRY 3-Months Implied Volatility, USD/TRY 3-Months Risk Reversal Skew, Turkish 5 Year CDS, BIST 100 Volatility, 2-Years Turkish Benchmark Interest Rate Volatility. For BIST 100 Volatility, a simple proxy is calculated as the difference between Open Price of BIST 100 at time <span class="math inline">\(t\)</span> and Lowest Price of BIST 100 at time <span class="math inline">\(t\)</span> divided by Open Price of BIST 100 at time <span class="math inline">\(t\)</span>. For 2-Years Turkish Benchmark Interest Rate Volatility, the difference between Open Price of 2-Years Turkish Benchmark Interest Rate at time <span class="math inline">\(t\)</span> and Highest Price of 2-Years Turkish Benchmark Interest Rate at time <span class="math inline">\(t\)</span> divided by Open Price of 2-Years Turkish Benchmark Interest Rate at time <span class="math inline">\(t\)</span> is used. All variables are standardized and smoothed using 3-days moving average. The weight of each variable in the index is obtained using principal components. The index data can be downloaded <a href="/files/TRYFCIindex.csv">here</a>.</p>
+<p><img src="/project/TurkeyFCI/Index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><div id="htmlwidget-1" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/project/TurkeyFCI/Index_files/figure-html//widgets/widget_unnamed-chunk-11.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+Here is the code in <i class='fab fa-r-project'></i> to produce the above plotly figure:</p>
+<pre class="r"><code>library(&quot;plotly&quot;) #animated graph
+library(&quot;widgetframe&quot;) #frame package
+
+index &lt;- read.csv(&quot;https://www.soybilgen.com/files/TRYFCIindex.csv&quot;, stringsAsFactors = F)
+index$Date &lt;- as.Date(index$Date, &quot;%Y-%m-%d&quot;)
+
+fig &lt;- plot_ly(index, x = ~Date)
+fig &lt;- fig %&gt;% add_trace(y = ~FCI, name = &#39;Financial Conditions Index&#39;,type = &#39;scatter&#39;, mode = &#39;lines&#39;,color = I(&#39;black&#39;))
+fig &lt;- fig %&gt;% add_trace(y = ~FX_Implied_Vol, name = &#39;TRY Implied Volatility&#39;, type = &#39;scatter&#39;, mode = &quot;lines&quot;,
+                         line = list(color = &#39;rgb(188, 189, 34)&#39;, width = 2, dash = &#39;solid&#39;, shape= &quot;linear&quot;), 
+                         fill = &#39;tozeroy&#39;, fillcolor=&#39;rgba(188, 189, 34, 0.5)&#39;,hoveron = &#39;points&#39;)
+fig &lt;- fig %&gt;% add_trace(y = ~FX_25_Delta_Rate, name = &#39;TRY 25 Delta Rate&#39;, type = &#39;scatter&#39;, mode = &quot;lines&quot;,
+                         line = list(color = &#39;rgb(127, 127, 127)&#39;, width = 2, dash = &#39;solid&#39;, shape= &quot;linear&quot;), 
+                         fill = &#39;tozeroy&#39;, fillcolor=&#39;rgba(127, 127, 127, 0.5)&#39;,hoveron = &#39;points&#39;)
+fig &lt;- fig %&gt;% add_trace(y = ~CDS, name = &#39;CDS&#39;, type = &#39;scatter&#39;, mode = &quot;lines&quot;,
+                         line = list(color = &#39;rgb(214, 39, 40)&#39;, width = 2, dash = &#39;solid&#39;, shape= &quot;linear&quot;), 
+                         fill = &#39;tozeroy&#39;, fillcolor=&#39;rgba(214, 39, 40, 0.5)&#39;,hoveron = &#39;points&#39;)
+fig &lt;- fig %&gt;% add_trace(y = ~BIST100_Vol, name = &#39;BIST 100 Volatility&#39;, type = &#39;scatter&#39;, mode = &quot;lines&quot;,
+                         line = list(color = &#39;rgb(255, 199, 38)&#39;, width = 2, dash = &#39;solid&#39;, shape= &quot;linear&quot;), 
+                         fill = &#39;tozeroy&#39;, fillcolor=&#39;rgba(255, 199, 38, 0.5)&#39;,hoveron = &#39;points&#39;)
+fig &lt;- fig %&gt;% add_trace(y = ~Benchmark_Rate_Vol, name = &#39;Interest Rate Volatility&#39;, type = &#39;scatter&#39;, mode = &quot;lines&quot;,
+                         line = list(color = &#39;rgb(87, 65, 47)&#39;, width = 2, dash = &#39;solid&#39;, shape= &quot;linear&quot;), 
+                         fill = &#39;tozeroy&#39;, fillcolor=&#39;rgba(87, 65, 47, 0.5)&#39;,hoveron = &#39;points&#39;)
+fig &lt;- fig %&gt;% rangeslider()
+fig &lt;- fig %&gt;% layout(xaxis = list(title = &quot;&quot;))
+fig &lt;- fig %&gt;% layout(yaxis = list(title = &quot;&quot;))
+fig &lt;- fig %&gt;% layout(legend = list(orientation = &#39;h&#39;))
+fig &lt;- fig %&gt;% layout(legend = list(x = 0, y = -0.5))
+fig &lt;- fig %&gt;% layout(title = &quot;&lt;b&gt;Financial Conditions Index&lt;/b&gt;&quot;)
+
+frameWidget(fig)</code></pre>
