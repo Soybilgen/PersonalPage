@@ -5,7 +5,7 @@ bio: Experienced econometrician specialized in economic, financial, and business
 organizations:
 - name: Istanbul Bilgi University
   url: "https://www.bilgi.edu.tr/tr/akademik/kadro/baris-soybilgen/"
-role: Assistant Professor of Management Information Systems
+role: Assistant Professor in the Department of Management Information Systems
 social:
 - icon: envelope
   icon_pack: fas
@@ -29,7 +29,7 @@ user_groups:
 - Visitors
 ---
 
-I am an assistant professor in the Department of Management Information Systems and the assistant director of Center for Financial Studies at Istanbul Bilgi University. My current research agenda is to develop machine learning models to identify and forecast turning points in the economy.
+I am an assistant professor in the Department of Management Information Systems under the Faculty of Business and the assistant director of Center for Financial Studies at Istanbul Bilgi University. My current research agenda is to develop machine learning models to identify and forecast turning points in the economy.
 
 I also maintain [NowcastTurkey.com](NowcastTurkey.com) which produces GDP nowcasts of Turkish economy.
 
