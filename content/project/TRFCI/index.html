@@ -3,7 +3,7 @@ title: Daily Turkish Financial Conditions Index
 summary: This index tracks the volatility and risk in the Turkish Financial Markets.
 tags:
 - Turkey
-date: '2020-06-23'
+date: '2020-07-02'
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -14,10 +14,10 @@ image:
   preview_only: T
 
 links:
-- icon: twitter
-  icon_pack: fab
-  name: Follow
-  url: https://twitter.com/soybilgen
+# - icon: twitter
+#   icon_pack: fab
+#   name: Follow
+#   url: https://twitter.com/soybilgen
 url_code: ""
 url_pdf: ""
 url_slides: ""
@@ -37,8 +37,17 @@ slides: example
 
 
 <p><img src="/project/TRFCI/index_files/figure-html/unnamed-chunk-5-1.png" width="672" />
-This index tracks the volatility and risk in the Turkish financial markets. Five variables that can be used the track financial conditions in Turkey are selected for this index: USD/TRY 3-Months Implied Volatility, USD/TRY 3-Months Risk Reversal Skew, Turkish 5 Year CDS, BIST 100 Volatility, 2-Years Turkish Benchmark Interest Rate Volatility. The index data can be downloaded <a href="/files/TRYFCIindex.csv">here</a>
-#As Turkey is a developing country, there are not many indices to track the volatility in Turkish financial markets. Therefore, a simple financial conditions index is proposed to track the volatility and risk in the Turkish financial markets. Five variables that can be used the track financial conditions in Turkey are selected for this index: USD/TRY 3-Months Implied Volatility, USD/TRY 3-Months Risk Reversal Skew, Turkish 5 Year CDS, BIST 100 Volatility, 2-Years Turkish Benchmark Interest Rate Volatility. For BIST 100 Volatility, a simple proxy is calculated as the difference between Open Price of BIST 100 at time <span class="math inline">\(t\)</span> and Lowest Price of BIST 100 at time <span class="math inline">\(t\)</span> divided by Open Price of BIST 100 at time <span class="math inline">\(t\)</span>. For 2-Years Turkish Benchmark Interest Rate Volatility, the difference between Open Price of 2-Years Turkish Benchmark Interest Rate at time <span class="math inline">\(t\)</span> and Highest Price of 2-Years Turkish Benchmark Interest Rate at time <span class="math inline">\(t\)</span> divided by Open Price of 2-Years Turkish Benchmark Interest Rate at time <span class="math inline">\(t\)</span> is used. All variables are standardized and smoothed using 3-days moving average. The weight of each variable in the index is obtained using principal components. The index data can be downloaded <a href="/files/TRYFCIindex.csv">here</a>.</p>
+This index tracks the volatility and risk in the Turkish financial markets. Five variables that can be used the track financial conditions in Turkey are selected for this index:</p>
+<ol style="list-style-type: decimal">
+<li>USD/TRY 3-Months Implied Volatility,</li>
+<li>USD/TRY 3-Months Risk Reversal Skew,</li>
+<li>Turkish 5 Year CDS,</li>
+<li>BIST 100 Volatility<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>,</li>
+<li>2-Years Turkish Benchmark Interest Rate Volatility<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</li>
+</ol>
+<p>All variables are standardized and smoothed using 3-days moving average. The weight of each variable in the index is obtained using principal component analysis.</p>
+<p>The index data can be downloaded <a href="/files/TRYFCIindex.csv">here</a></p>
+<!-- As Turkey is a developing country, there are not many indices to track the volatility in Turkish financial markets. Therefore, a simple financial conditions index is proposed to track the volatility and risk in the Turkish financial markets. Five variables that can be used the track financial conditions in Turkey are selected for this index: USD/TRY 3-Months Implied Volatility, USD/TRY 3-Months Risk Reversal Skew, Turkish 5 Year CDS, BIST 100 Volatility, 2-Years Turkish Benchmark Interest Rate Volatility. For BIST 100 Volatility, a simple proxy is calculated as the difference between Open Price of BIST 100 at time $t$ and Lowest Price of BIST 100 at time $t$ divided by Open Price of BIST 100 at time $t$. For 2-Years Turkish Benchmark Interest Rate Volatility, the difference between Open Price of 2-Years Turkish Benchmark Interest Rate at time $t$ and Highest Price of 2-Years Turkish Benchmark Interest Rate at time $t$ divided by Open Price of 2-Years Turkish Benchmark Interest Rate at time $t$ is used. All variables are standardized and smoothed using 3-days moving average. The weight of each variable in the index is obtained using principal components. The index data can be downloaded <a href="/files/TRYFCIindex.csv">here</a>. -->
 <p><div id="htmlwidget-1" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"url":"/project/TRFCI/index_files/figure-html//widgets/widget_unnamed-chunk-7.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 Here is the code in <i class='fab fa-r-project'></i> to produce the above plotly figure (will appear in a minute):</p>
@@ -73,3 +82,10 @@ fig &lt;- fig %&gt;% layout(legend = list(x = 0, y = -0.5))
 fig &lt;- fig %&gt;% layout(title = &quot;&lt;b&gt;Financial Conditions Index&lt;/b&gt;&quot;)
 
 frameWidget(fig)</code></pre>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>The difference between Open Price of BIST 100 at time <span class="math inline">\(t\)</span> and Lowest Price of BIST 100 at time <span class="math inline">\(t\)</span> divided by Open Price of BIST 100 at time <span class="math inline">\(t\)</span>.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>the difference between Open Price of 2-Years Turkish Benchmark Interest Rate at time <span class="math inline">\(t\)</span> and Highest Price of 2-Years Turkish Benchmark Interest Rate at time <span class="math inline">\(t\)</span> divided by Open Price of 2-Years Turkish Benchmark Interest Rate at time <span class="math inline">\(t\)</span>.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
