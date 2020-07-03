@@ -1,15 +1,15 @@
 ---
-title: Daily Turkish Financial Conditions Index
+title: Daily Turkish Financial Volatility Index
 summary: This index tracks the volatility and risk in the Turkish Financial Markets.
 tags:
 - Turkey
-date: '2020-07-02'
+date: '2020-07-03'
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
 
 image:
-  caption: Daily Turkish Financial Conditions Index
+  caption: Daily Turkish Financial Volatility Index
   focal_point: Smart
   preview_only: T
 
@@ -37,7 +37,7 @@ slides: example
 
 
 <p><img src="/project/TRFCI/index_files/figure-html/unnamed-chunk-5-1.png" width="672" />
-This index tracks the volatility and risk in the Turkish financial markets. Five variables that can be used the track financial conditions in Turkey are selected for this index:</p>
+This index tracks the volatility and risk in the Turkish financial markets. Five variables that can be used the track financial vlatility and risk in Turkey are selected for this index:</p>
 <ol style="list-style-type: decimal">
 <li>USD/TRY 3-Months Implied Volatility,</li>
 <li>USD/TRY 3-Months Risk Reversal Skew,</li>
@@ -58,7 +58,7 @@ index &lt;- read.csv(&quot;https://www.soybilgen.com/files/TRYFCIindex.csv&quot;
 index$Date &lt;- as.Date(index$Date, &quot;%Y-%m-%d&quot;)
 
 fig &lt;- plot_ly(index, x = ~Date)
-fig &lt;- fig %&gt;% add_trace(y = ~FCI, name = &#39;Financial Conditions Index&#39;,type = &#39;scatter&#39;, mode = &#39;lines&#39;,color = I(&#39;black&#39;))
+fig &lt;- fig %&gt;% add_trace(y = ~FCI, name = &#39;Financial Volatility Index&#39;,type = &#39;scatter&#39;, mode = &#39;lines&#39;,color = I(&#39;black&#39;))
 fig &lt;- fig %&gt;% add_trace(y = ~FX_Implied_Vol, name = &#39;TRY Implied Volatility&#39;, type = &#39;scatter&#39;, mode = &quot;lines&quot;,
                          line = list(color = &#39;rgb(188, 189, 34)&#39;, width = 2, dash = &#39;solid&#39;, shape= &quot;linear&quot;), 
                          fill = &#39;tozeroy&#39;, fillcolor=&#39;rgba(188, 189, 34, 0.5)&#39;,hoveron = &#39;points&#39;)
@@ -79,7 +79,7 @@ fig &lt;- fig %&gt;% layout(xaxis = list(title = &quot;&quot;))
 fig &lt;- fig %&gt;% layout(yaxis = list(title = &quot;&quot;))
 fig &lt;- fig %&gt;% layout(legend = list(orientation = &#39;h&#39;))
 fig &lt;- fig %&gt;% layout(legend = list(x = 0, y = -0.5))
-fig &lt;- fig %&gt;% layout(title = &quot;&lt;b&gt;Financial Conditions Index&lt;/b&gt;&quot;)
+fig &lt;- fig %&gt;% layout(title = &quot;&lt;b&gt;Financial Volatility Index&lt;/b&gt;&quot;)
 
 frameWidget(fig)</code></pre>
 <div class="footnotes">

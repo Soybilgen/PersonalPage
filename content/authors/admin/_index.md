@@ -1,7 +1,7 @@
 ---
 authors:
 - Baris Soybilgen
-bio: Econometrician and data scientist specialized in economic/financial/business forecasting and data analysis.
+bio: Economist with a strong focus in applied econometrics and data science.
 organizations:
 - name: Istanbul Bilgi University
   url: "https://www.bilgi.edu.tr/tr/akademik/kadro/baris-soybilgen/"
