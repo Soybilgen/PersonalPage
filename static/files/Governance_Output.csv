@@ -1,0 +1,186 @@
+Country Name,Country Code,Continent,Control of Corruption,Government Effectiveness,Regulatory Quality,Voice and Accountability,GDP Per Capita
+Algeria,DZA,Africa,-0.69,-0.54,-1.17,-0.88,3916.88
+Austria,AUT,Europe,1.54,1.51,1.44,1.29,44757.63
+Belgium,BEL,Europe,1.60,1.33,1.34,1.35,41271.48
+Benin,BEN,Africa,-0.48,-0.57,-0.53,0.50,789.44
+Denmark,DNK,Europe,2.24,1.89,1.58,1.47,53578.76
+Chad,TCD,Africa,-1.45,-1.49,-1.18,-1.34,664.30
+Guinea,GIN,Africa,-0.94,-1.01,-0.87,-0.73,661.53
+Indonesia,IDN,Asia,-0.39,0.01,-0.12,0.14,3570.29
+Lesotho,LSO,Africa,-0.02,-0.80,-0.39,0.03,1039.70
+Afghanistan,AFG,Asia,-1.56,-1.22,-1.33,-1.09,561.78
+Albania,ALB,Europe,-0.40,0.00,0.19,0.16,4124.98
+Andorra,AND,Europe,1.23,1.86,0.87,1.20,36988.62
+Angola,AGO,Africa,-1.41,-1.04,-1.00,-1.17,3308.70
+Antigua and Barbuda,ATG,North America,0.69,0.27,0.34,0.65,14462.18
+Argentina,ARG,South America,-0.31,0.18,-0.47,0.54,12440.32
+Armenia,ARM,Europe,-0.57,-0.15,0.25,-0.62,3614.69
+Australia,AUS,Oceania,1.77,1.58,1.90,1.30,49755.32
+Azerbaijan,AZE,Europe,-0.87,-0.16,-0.28,-1.60,3878.71
+"Bahamas, The",BHS,North America,1.13,0.72,0.26,0.94,28785.48
+Bahrain,BHR,Asia,-0.06,0.32,0.61,-1.45,22579.09
+Bangladesh,BGD,Asia,-0.80,-0.69,-0.80,-0.56,1358.78
+Barbados,BRB,North America,1.24,1.08,0.48,1.10,15891.63
+Belarus,BLR,Europe,-0.29,-0.51,-0.94,-1.39,4989.43
+Belize,BLZ,North America,-0.24,-0.68,-0.51,0.67,4744.74
+Bhutan,BTN,Asia,1.14,0.49,-0.67,-0.05,2773.55
+Bolivia,BOL,South America,-0.71,-0.57,-0.92,0.01,3104.96
+Bosnia and Herzegovina,BIH,Europe,-0.47,-0.43,-0.17,-0.16,4808.41
+Botswana,BWA,Africa,0.93,0.51,0.53,0.42,6924.15
+Brazil,BRA,South America,-0.44,-0.18,-0.21,0.47,8649.95
+Brunei Darussalam,BRN,Asia,0.66,1.07,0.59,-0.95,26939.42
+Bulgaria,BGR,Europe,-0.16,0.29,0.66,0.44,7469.03
+Burkina Faso,BFA,Africa,-0.13,-0.55,-0.40,0.04,627.10
+Burundi,BDI,Africa,-1.18,-1.40,-0.83,-1.51,285.73
+Cabo Verde,CPV,Africa,0.88,0.10,-0.30,1.02,2997.75
+Cambodia,KHM,Asia,-1.30,-0.69,-0.47,-1.14,1269.91
+Cameroon,CMR,Africa,-1.14,-0.76,-0.79,-1.03,1374.51
+Canada,CAN,North America,1.98,1.80,1.74,1.38,42183.30
+Central African Republic,CAF,Africa,-1.28,-1.77,-1.43,-1.13,382.21
+Chile,CHL,South America,1.11,1.02,1.37,1.00,13792.93
+China,CHN,Asia,-0.25,0.36,-0.26,-1.62,8123.18
+Colombia,COL,South America,-0.34,0.02,0.40,0.10,5805.61
+Comoros,COM,Africa,-0.64,-1.54,-1.05,-0.18,775.08
+"Congo, Dem. Rep.",COD,Africa,-1.33,-1.51,-1.32,-1.39,405.54
+"Congo, Rep.",COG,Africa,-1.21,-1.10,-1.17,-1.16,1528.24
+Costa Rica,CRI,North America,0.70,0.36,0.41,1.14,11824.64
+Cote d'Ivoire,CIV,Africa,-0.54,-0.67,-0.36,-0.28,1534.97
+Croatia,HRV,Europe,0.19,0.49,0.36,0.52,12149.19
+Cyprus,CYP,Europe,0.82,0.98,1.05,1.08,23541.49
+Czech Republic,CZE,Europe,0.51,1.06,0.99,1.05,18483.72
+Dominica,DMA,North America,0.63,0.05,0.20,0.99,7906.72
+Dominican Republic,DOM,North America,-0.78,-0.25,-0.07,0.19,6722.22
+Ecuador,ECU,South America,-0.67,-0.43,-1.02,-0.25,6018.53
+"Egypt, Arab Rep.",EGY,Africa,-0.63,-0.66,-0.92,-1.23,3477.85
+El Salvador,SLV,North America,-0.57,-0.28,0.09,0.28,4223.58
+Equatorial Guinea,GNQ,Africa,-1.81,-1.41,-1.38,-1.93,8747.35
+Estonia,EST,Europe,1.21,1.12,1.70,1.20,17736.80
+Ethiopia,ETH,Africa,-0.44,-0.64,-1.10,-1.45,706.76
+Fiji,FJI,Oceania,0.13,-0.26,-0.38,-0.03,5233.47
+Finland,FIN,Europe,2.28,1.85,1.82,1.49,43401.23
+France,FRA,Europe,1.37,1.41,1.07,1.08,36857.12
+Gabon,GAB,Africa,-0.75,-0.79,-0.80,-0.96,7179.34
+"Gambia, The",GMB,Africa,-0.80,-0.84,-0.51,-1.28,473.19
+Georgia,GEO,Europe,0.67,0.51,1.01,0.22,3865.79
+Germany,DEU,Europe,1.83,1.74,1.82,1.33,42161.32
+Ghana,GHA,Africa,-0.17,-0.20,-0.23,0.64,1513.46
+Greece,GRC,Europe,-0.05,0.21,0.15,0.65,17890.57
+Grenada,GRD,North America,0.57,-0.18,0.08,0.86,9841.76
+Guatemala,GTM,North America,-0.74,-0.60,-0.20,-0.31,4146.74
+Guinea-Bissau,GNB,Africa,-1.56,-1.64,-1.24,-0.70,641.60
+Guyana,GUY,South America,-0.32,-0.30,-0.42,0.30,4529.14
+Haiti,HTI,North America,-1.35,-2.06,-1.24,-0.73,739.60
+Honduras,HND,North America,-0.69,-0.73,-0.51,-0.43,2361.16
+"Hong Kong SAR, China",HKG,Asia,1.58,1.86,2.15,0.27,43740.99
+Hungary,HUN,Europe,0.08,0.45,0.60,0.37,12820.09
+Iceland,ISL,Europe,1.99,1.41,1.28,1.34,59764.71
+India,IND,Asia,-0.30,0.10,-0.31,0.41,1709.59
+"Iran, Islamic Rep.",IRN,Asia,-0.72,-0.20,-1.23,-1.39,5219.11
+Iraq,IRQ,Asia,-1.40,-1.26,-1.13,-1.01,4609.60
+Ireland,IRL,Europe,1.63,1.35,1.74,1.29,64175.44
+Israel,ISR,Asia,1.06,1.35,1.31,0.77,37180.53
+Italy,ITA,Europe,0.05,0.52,0.71,1.04,30661.22
+Jamaica,JAM,North America,-0.16,0.41,0.16,0.69,4878.58
+Japan,JPN,Asia,1.51,1.83,1.43,1.00,38900.57
+Jordan,JOR,Asia,0.27,0.14,0.05,-0.76,4087.94
+Kazakhstan,KAZ,Europe,-0.80,-0.06,-0.10,-1.29,7714.69
+Kenya,KEN,Africa,-0.90,-0.31,-0.30,-0.15,1455.36
+Kiribati,KIR,Oceania,0.25,-0.45,-0.84,1.03,1587.06
+"Korea, Rep.",KOR,Asia,0.37,1.07,1.11,0.63,27538.81
+Kuwait,KWT,Asia,-0.20,-0.18,-0.07,-0.69,27359.23
+Kyrgyz Republic,KGZ,Asia,-1.08,-0.90,-0.35,-0.49,1077.60
+Lao PDR,LAO,Asia,-0.93,-0.39,-0.73,-1.73,2338.69
+Latvia,LVA,Europe,0.49,1.00,1.08,0.87,14071.03
+Lebanon,LBN,Asia,-0.97,-0.53,-0.34,-0.52,8257.29
+Liberia,LBR,Africa,-0.71,-1.32,-0.95,-0.10,455.37
+Lithuania,LTU,Europe,0.67,1.09,1.14,0.99,14900.78
+Luxembourg,LUX,Europe,2.08,1.69,1.72,1.44,100738.68
+"Macao SAR, China",MAC,Asia,0.83,1.18,1.78,-0.06,74017.18
+"Macedonia, FYR",MKD,Europe,-0.31,0.09,0.44,-0.23,5237.15
+Madagascar,MDG,Africa,-0.90,-1.17,-0.69,-0.27,401.74
+Malawi,MWI,Africa,-0.75,-0.73,-0.84,0.04,300.31
+Malaysia,MYS,Asia,0.11,0.88,0.71,-0.47,9508.24
+Maldives,MDV,Asia,-0.67,-0.33,-0.46,-0.74,9875.28
+Mali,MLI,Africa,-0.67,-0.99,-0.59,-0.18,779.94
+Malta,MLT,Europe,0.72,0.95,1.16,1.20,25145.39
+Marshall Islands,MHL,Oceania,-0.06,-1.56,-0.98,1.20,3665.21
+Mauritania,MRT,Africa,-0.80,-0.79,-0.74,-0.83,1101.90
+Mauritius,MUS,Africa,0.32,0.96,1.03,0.86,9630.94
+Mexico,MEX,North America,-0.77,0.14,0.29,-0.09,8208.56
+"Micronesia, Fed. Sts.",FSM,Oceania,0.65,-0.35,-0.97,1.16,3143.75
+Moldova,MDA,Europe,-0.96,-0.62,-0.12,-0.03,1900.23
+Mongolia,MNG,Asia,-0.50,-0.11,-0.08,0.45,3694.08
+Montenegro,MNE,Europe,-0.10,0.10,0.22,0.08,7028.93
+Morocco,MAR,Africa,-0.15,-0.10,-0.23,-0.65,2892.78
+Mozambique,MOZ,Africa,-0.87,-0.85,-0.70,-0.39,382.07
+Myanmar,MMR,Asia,-0.65,-0.98,-0.87,-0.85,1195.52
+Namibia,NAM,Africa,0.37,0.17,-0.14,0.61,4414.98
+Nauru,NRU,Oceania,-0.47,-0.69,-0.38,0.52,7821.30
+Nepal,NPL,Asia,-0.76,-0.81,-0.76,-0.23,729.12
+Netherlands,NLD,Europe,1.95,1.84,1.98,1.48,45637.89
+New Zealand,NZL,Oceania,2.30,1.86,2.04,1.44,39412.16
+Nicaragua,NIC,North America,-0.89,-0.70,-0.51,-0.63,2151.38
+Nigeria,NGA,Africa,-1.04,-1.09,-0.92,-0.30,2175.67
+Norway,NOR,Europe,2.20,1.88,1.70,1.58,70868.12
+Oman,OMN,Asia,0.37,0.19,0.61,-1.11,14982.36
+Pakistan,PAK,Asia,-0.86,-0.64,-0.64,-0.69,1443.63
+Palau,PLW,Oceania,-0.47,-0.41,-0.18,1.23,14428.14
+Panama,PAN,North America,-0.49,0.19,0.36,0.53,13680.24
+Papua New Guinea,PNG,Oceania,-0.92,-0.73,-0.56,0.19,2500.09
+Paraguay,PRY,South America,-0.75,-0.77,-0.30,-0.04,4077.74
+Peru,PER,South America,-0.35,-0.17,0.51,0.28,6049.23
+Philippines,PHL,Asia,-0.53,-0.01,0.00,0.14,2951.07
+Poland,POL,Europe,0.75,0.69,0.95,0.84,12414.10
+Portugal,PRT,Europe,0.96,1.22,0.84,1.17,19838.03
+Puerto Rico,PRI,North America,0.04,0.38,0.95,0.40,30790.10
+Qatar,QAT,Asia,0.92,0.75,0.70,-1.20,59324.34
+Romania,ROU,Europe,0.00,-0.17,0.59,0.51,9522.77
+Russian Federation,RUS,Europe,-0.86,-0.22,-0.42,-1.21,8748.37
+Rwanda,RWA,Africa,0.69,0.11,0.11,-1.21,702.84
+Samoa,WSM,Oceania,0.28,0.54,-0.10,0.76,4030.01
+Sao Tome and Principe,STP,Africa,-0.06,-0.68,-0.81,0.45,1714.68
+Saudi Arabia,SAU,Asia,0.23,0.24,0.08,-1.78,20028.65
+Senegal,SEN,Africa,-0.03,-0.47,-0.14,0.37,952.77
+Serbia,SRB,Europe,-0.31,0.09,0.06,0.21,5426.20
+Seychelles,SYC,Africa,0.79,0.36,-0.26,0.16,15075.72
+Sierra Leone,SLE,Africa,-0.82,-1.20,-0.93,-0.13,505.20
+Singapore,SGP,Asia,2.07,2.21,2.18,-0.28,52962.49
+Slovak Republic,SVK,Europe,0.24,0.89,0.89,0.94,16529.54
+Slovenia,SVN,Europe,0.80,1.12,0.64,1.00,21650.21
+Solomon Islands,SLB,Oceania,-0.34,-0.99,-0.96,0.49,2005.48
+Somalia,SOM,Africa,-1.69,-2.18,-2.27,-1.83,434.21
+South Africa,ZAF,Africa,0.05,0.27,0.21,0.64,5274.55
+Spain,ESP,Europe,0.52,1.12,1.01,1.06,26616.49
+Sri Lanka,LKA,Asia,-0.28,-0.21,-0.10,-0.11,3909.99
+St. Kitts and Nevis,KNA,North America,0.52,0.14,0.37,1.07,16596.83
+St. Lucia,LCA,North America,0.63,0.01,0.29,1.09,9364.82
+St. Vincent and the Grenadines,VCT,North America,0.68,0.21,0.28,1.04,7006.60
+Sudan,SDN,Africa,-1.61,-1.41,-1.49,-1.80,2415.04
+Suriname,SUR,South America,-0.32,-0.34,-0.63,0.46,5871.44
+Swaziland,SWZ,Africa,-0.44,-0.56,-0.58,-1.42,2770.20
+Sweden,SWE,Europe,2.22,1.79,1.85,1.50,51844.76
+Switzerland,CHE,Europe,2.05,2.03,1.91,1.46,79887.52
+Tajikistan,TJK,Asia,-1.07,-1.02,-1.09,-1.67,795.84
+Tanzania,TZA,Africa,-0.51,-0.55,-0.44,-0.18,877.51
+Thailand,THA,Asia,-0.40,0.34,0.17,-1.10,5910.62
+Timor-Leste,TLS,Asia,-0.51,-1.03,-0.98,0.24,1405.39
+Togo,TGO,Africa,-0.68,-1.08,-0.79,-0.51,578.46
+Tonga,TON,Oceania,-0.44,-0.29,-0.41,0.67,3748.64
+Trinidad and Tobago,TTO,North America,-0.26,0.22,0.09,0.60,16040.52
+Tunisia,TUN,Africa,-0.12,-0.21,-0.47,0.33,3688.65
+Turkey,TUR,Europe,-0.20,0.05,0.20,-0.63,10862.60
+Turkmenistan,TKM,Asia,-1.46,-1.14,-2.09,-2.13,6389.33
+Tuvalu,TUV,Oceania,0.03,-0.93,-0.59,1.09,3083.62
+Uganda,UGA,Africa,-1.06,-0.57,-0.21,-0.71,580.38
+Ukraine,UKR,Europe,-0.84,-0.58,-0.43,0.02,2185.73
+United Arab Emirates,ARE,Asia,1.28,1.41,0.97,-1.12,37622.21
+United Kingdom,GBR,Europe,1.88,1.61,1.76,1.24,40367.04
+United States,USA,North America,1.33,1.48,1.50,1.10,57638.16
+Uruguay,URY,South America,1.32,0.55,0.49,1.18,15220.57
+Uzbekistan,UZB,Asia,-1.20,-0.60,-1.62,-1.89,2110.67
+Vanuatu,VUT,Oceania,-0.10,-0.88,-0.29,0.69,2860.57
+Vietnam,VNM,Asia,-0.40,0.01,-0.45,-1.41,2170.65
+West Bank and Gaza,PSE,Asia,-0.15,-0.62,0.06,-1.17,2943.40
+"Yemen, Rep.",YEM,Asia,-1.67,-1.82,-1.48,-1.65,990.33
+Zambia,ZMB,Africa,-0.40,-0.66,-0.48,-0.30,1269.57
+Zimbabwe,ZWE,Africa,-1.28,-1.16,-1.72,-1.11,1029.08
