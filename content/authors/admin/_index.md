@@ -1,7 +1,7 @@
 ---
 authors:
 - Baris Soybilgen
-bio: Economist with a strong focus in applied econometrics and data science.
+bio: Researcher, Economist, Data Scientist.
 organizations:
 - name: Istanbul Bilgi University
   url: "https://www.bilgi.edu.tr/tr/akademik/kadro/baris-soybilgen/"
@@ -29,7 +29,7 @@ user_groups:
 - Visitors
 ---
 
-I am an assistant professor in the Department of Management Information Systems under the Faculty of Business and the assistant director of Center for Financial Studies at Istanbul Bilgi University. I also maintain [NowcastTurkey.com](NowcastTurkey.com) which produces GDP nowcasts of Turkish economy.
+I am an assistant professor in the Department of Management Information Systems under the Faculty of Business and the assistant director of Center for Financial Studies at Istanbul Bilgi University. I am also a freelance data scientist.
 
 I have a PhD in Economics. My main interests are applied econometrics and data science. My research agenda is mostly focus on developing linear and machine learning models to predict macroeconomic and financial variables. I am also interested in evaluating Turkish economy using panel and time series analysis.
 
