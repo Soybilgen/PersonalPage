@@ -5,7 +5,7 @@ bio: Researcher, Economist, Data Scientist.
 organizations:
 - name: The Governance and Local Development Institute
   url: "https://gld.gu.se/en/about-gld/the-team/data-team/"
-role: Assistant Professor in the Department of Management Information Systems
+role: Data Analyst in the Governance and Local Development Institute
 social:
 - icon: envelope
   icon_pack: fas
