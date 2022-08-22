@@ -3,13 +3,13 @@ authors:
 - Baris Soybilgen
 bio: Researcher, Economist, Data Scientist.
 organizations:
-- name: Istanbul Bilgi University
-  url: "https://www.bilgi.edu.tr/tr/akademik/kadro/baris-soybilgen/"
+- name: The Governance and Local Development Institute
+  url: "https://gld.gu.se/en/about-gld/the-team/data-team/"
 role: Assistant Professor in the Department of Management Information Systems
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:baris.soybilgen@bilgi.edu.tr
+  link: mailto:baris.soybilgen@gu.se
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/Soybilgen
@@ -29,7 +29,7 @@ user_groups:
 - Visitors
 ---
 
-I am an assistant professor in the Department of Management Information Systems under the Faculty of Business and the assistant director of Center for Financial Studies at Istanbul Bilgi University. I am also a freelance data scientist.
+I am a data analyst in the The Governance and Local Development Institute at the Gothenburg University. I am also a freelance data scientist.
 
 I have a PhD in Economics. My main interests are applied econometrics and data science. My research agenda is mostly focus on developing linear and machine learning models to predict macroeconomic and financial variables. I am also interested in evaluating Turkish economy using panel and time series analysis.
 
