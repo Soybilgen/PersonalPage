@@ -4,7 +4,7 @@ authors:
 bio: Researcher, Economist, Data Scientist.
 organizations:
 - name: Sambla Group
-role: Data Analyst in the Governance and Local Development Institute
+role: Data Scientist at Sambla Group
 social:
 - icon: envelope
   icon_pack: fas
