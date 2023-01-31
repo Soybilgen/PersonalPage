@@ -8,7 +8,7 @@ role: Data Analyst in the Governance and Local Development Institute
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:baris.soybilgen@gu.se
+  link: mailto:soybilgen@gmail.com
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/Soybilgen
@@ -28,6 +28,6 @@ user_groups:
 - Visitors
 ---
 
-I am a PhD level economist working as a data scientist at Sambla Group. My main interests are applied econometrics and data science. My  work and research agenda is mostly focus on developing linear and machine learning models in time series framework. 
+I am a PhD level economist working as a data scientist at Sambla Group. My work and research agenda is mostly focus on developing linear and machine learning models in the time series framework.
 
 My Interests: Time-Series/Panel Data Analysis, Macroeconomic/Financial Forecasting, Machine Learning, and Data Visualization.
