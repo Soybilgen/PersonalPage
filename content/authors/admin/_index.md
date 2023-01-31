@@ -3,8 +3,7 @@ authors:
 - Baris Soybilgen
 bio: Researcher, Economist, Data Scientist.
 organizations:
-- name: The Governance and Local Development Institute
-  url: "https://gld.gu.se/en/about-gld/the-team/data-team/"
+- name: Sambla Group
 role: Data Analyst in the Governance and Local Development Institute
 social:
 - icon: envelope
@@ -18,7 +17,7 @@ social:
   link: https://scholar.google.com/citations?user=hMNjIm8AAAAJ&hl=tr
 - icon: github
   icon_pack: fab
-  link: https://github.com/Soybilgen
+  link: https://github.com/BSoybilgen
 - icon: researchgate
   icon_pack: ai
   link: https://www.researchgate.net/profile/Baris_Soybilgen
@@ -29,10 +28,6 @@ user_groups:
 - Visitors
 ---
 
-I am a data analyst in the The Governance and Local Development Institute at the Gothenburg University. I am also a freelance data scientist.
-
-I have a PhD in Economics. My main interests are applied econometrics and data science. My research agenda is mostly focus on developing linear and machine learning models to predict macroeconomic and financial variables. I am also interested in evaluating Turkish economy using panel and time series analysis.
-
-I also assist NGOs and businesses in developing predictive models, deriving useful insights from their collected data, and conducting economic impact analysis. I am always open to new challenges and business opportunities. Please free to contact me.
+I am a PhD level economist working as a data scientist at Sambla Group. My main interests are applied econometrics and data science. My  work and research agenda is mostly focus on developing linear and machine learning models in time series framework. 
 
 My Interests: Time-Series/Panel Data Analysis, Macroeconomic/Financial Forecasting, Machine Learning, and Data Visualization.
