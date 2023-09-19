@@ -28,6 +28,14 @@ user_groups:
 - Visitors
 ---
 
-I am a PhD level economist working as a data scientist at Sambla Group. My work and research agenda is mostly focus on developing linear and machine learning models in the time series framework.
+I'm Baris Soybilgen, an experienced data scientist and economist based in Stockholm. With over a decade of experience in the field, I've sharpened my skills in predictive modeling, statistical evaluation, and data visualization. My academic background, which includes a Ph.D. in Economics and a Bachelor of Science in Systems Engineering, has enhanced my analytical capabilities.
 
-My Interests: Time-Series/Panel Data Analysis, Macroeconomic/Financial Forecasting, Machine Learning, and Data Visualization.
+I've had the privilege to work with diverse organizations, including the Sambla Group in Stockholm, where I currently contribute as a Data Scientist. Prior to this, I've worked as a data analyst at The Governance and Local Development Institute in Gothenburg and assistant professor at Istanbul Bilgi University in Istanbul. Throughout my journey, I've been driven by the passion to leverage data in innovative ways that yield impactful results. 
+
+My technical proficiency spans across multiple platforms and languages, including Python, R, Matlab, and SQL. Apart from these, I'm adept at developing cloud applications and creating interactive dashboards.
+
+In addition to my professional pursuits, I am conducting several research projects such as developing food price indices by scraping web-based food price data daily; predicting GDP growth rates with tree-based ensemble machine learning models and dynamic factor models; identifying business cycle states using neural networks.
+
+Thank you for visiting my personal space. I look forward to connecting with like-minded professionals and exploring collaborative opportunities!
+
+My Interests: Macroeconomic/Financial Forecasting, Machine Learning, Data Visualization, Time-Series/Panel Data Analysis, and Large Language Models.
