@@ -23,8 +23,32 @@ div.gray { background-color:#F3F3F3; border-radius: 5px; padding: 20px;}
 ---
 
 <div class = "gray">
-[**Nowcasting US GDP Using Tree-Based Ensemble Models and Dynamic Factors**](../files/WP1.pdf) &middot; 
-Computational Economics, Forthcoming \
+[**Big data financial transactions and GDP nowcasting: The case of Turkey**](https://onlinelibrary.wiley.com/doi/full/10.1002/for.3032) &middot; 
+Journal of Forecasting, 2023 \
+(with Ali B. Barlas, Seda Guler Mert, Berk Orkun Isa, Alvaro Ortiz, Tomasa Rodrigo, and Ege Yazgan)
+
+<span style="color: red;">Abstract:</span>
+
+We use aggregated information from individual-to-firm and firm-to-firm transactions from the Garanti BBVA Bank to simulate domestic private demand and estimate aggregate consumption and investment for Turkey's quarterly national accounts in real time. We show that these big data variables successfully nowcast official consumption and investment flows. To further validate the usefulness of these indicators, we include both indicators among others which are generally used in gross domestic product (GDP) nowcasting and evaluate their contribution to nowcasting power of Turkish GDP by combining both linear and nonlinear models. The results are successful and confirm the usefulness of consumption and investment banking transactions for nowcasting purposes. These big data are valuable, especially at the beginning of the nowcasting process, when the traditional hard data are scarce. Accordingly, this information is especially relevant for countries with longer statistical release lags, such as emerging markets.
+</div>
+
+<br>
+
+<div class = "gray">
+[**Nowcasting Turkish Food Inflation Using Daily Online Prices**](https://link.springer.com/article/10.1007/s41549-023-00084-2) &middot; 
+Computational Economics, 2023 \
+(with Ege Yazgan and Huseyin Kaya)
+
+<span style="color: red;">Abstract:</span>
+
+This study uses a sample of daily food prices scraped from retail chains’ websites for the period from July 2018 to December 2020, comprising over 5.9 million data points. Using these food prices, we construct 132 food price subindexes compatible with official data published by the Turkish Statistical Institute (Turkstat), which are published only once a month. We then use the online food price subindexes to calculate the primary food inflation rate. We find that changes in our online food price index and the Turkstat data are closely related. The daily online food price index is then used to nowcast official food and headline inflation. Our results show that the online index successfully nowcasts the official inflation rates, providing results considerably earlier than the official rate is announced. We also observe that the implementation of the first coronavirus restrictions in Turkey in early 2020 caused online food prices to jump, whereas official food prices did not experience the same spike.
+</div>
+
+<br>
+
+<div class = "gray">
+[**Nowcasting US GDP Using Tree-Based Ensemble Models and Dynamic Factors**](https://link.springer.com/article/10.1007/s10614-020-10083-5) &middot; 
+Computational Economics, 2021 \
 (with Ege Yazgan)
 
 <span style="color: red;">Abstract:</span>
