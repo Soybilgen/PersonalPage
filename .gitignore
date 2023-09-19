@@ -3,6 +3,7 @@
 .Ruserdata
 .DS_Store
 *.Rmd
+*.bak
 
 public/
 .Rproj.user/
