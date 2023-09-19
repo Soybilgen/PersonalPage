@@ -44,3 +44,8 @@
    name = "Research"
    url = "research"
    weight = 20
+   
+  [[main]]
+   name = "Turkish Food Index Project"
+   url = "https://cefis-food-indices.streamlit.app/"
+   weight = 30 

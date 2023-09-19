@@ -37,5 +37,3 @@ My technical proficiency spans across multiple platforms and languages, includin
 In addition to my professional pursuits, I am conducting several research projects such as developing food price indices by scraping web-based food price data daily; predicting GDP growth rates with tree-based ensemble machine learning models and dynamic factor models; identifying business cycle states using neural networks.
 
 Thank you for visiting my personal space. I look forward to connecting with like-minded professionals and exploring collaborative opportunities!
-
-My Interests: Macroeconomic/Financial Forecasting, Machine Learning, Data Visualization, Time-Series/Panel Data Analysis, and Large Language Models.
